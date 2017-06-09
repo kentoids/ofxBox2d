@@ -36,6 +36,20 @@ public:
     void setEnableLimit(bool enableLimit);
     bool getEnableLimit() const;
     
+    void setMotor(float _maxMotorTorque, float _motorSpeed) {
+        if (joint) {
+            joint->EnableMotor(true);
+            joint->SetMaxMotorTorque(_maxMotorTorque);
+            joint->SetMotorSpeed(_motorSpeed);
+        }
+    }
+    
+    void setMotorSpeed(float _motorSpeed) {
+        if (joint) {
+            joint->SetMotorSpeed(_motorSpeed);
+        }
+    }
+    
 	//----------------------------------------
 	ofVec2f getReactionForce(float inv_dt) const;
 	b2Vec2  getReactionForceB2D(float inv_dt) const;

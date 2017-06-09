@@ -111,6 +111,8 @@ void ofxBox2dRevoluteJoint::draw() {
 	p1 *= OFX_BOX2D_SCALE;
 	p2 *= OFX_BOX2D_SCALE;
 	ofDrawLine(p1.x, p1.y, p2.x, p2.y);
+    ofDrawCircle(p1.x, p1.y, 5);
+    ofDrawCircle(p2.x, p2.y, 5);
 }
 
 //----------------------------------------
