@@ -214,13 +214,3 @@ void ofxBox2dRect::draw() {
 void ofxBox2dRect::setBodyType(b2BodyType _bodytype) {
     body->SetType(_bodytype);
 }
-
-void ofxBox2dRect::setFilterGroup(int ix) {
-    fixture.filter.groupIndex = ix;
-    body->GetFixtureList()->SetFilterData(fixture.filter);
-}
-
-void ofxBox2dRect::setCategoryBits(int ix) {
-    fixture.filter.categoryBits = ix;
-    body->GetFixtureList()->SetFilterData(fixture.filter);
-}

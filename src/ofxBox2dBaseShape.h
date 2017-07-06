@@ -104,6 +104,10 @@ public:
 	virtual void update();
 	virtual void draw();
 	
+    // edited by kento ----------------------------------------
+    void setFilterGroup(int ix);
+    void setCategoryBits(int ix);
+    void setMaskBits(short s);
 };
 
 

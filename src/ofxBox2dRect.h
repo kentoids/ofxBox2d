@@ -36,8 +36,6 @@ public:
 	void addRepulsionForce(ofVec2f pt, float amt);
     
     void setBodyType(b2BodyType _bodytype);
-    void setFilterGroup(int ix);
-    void setCategoryBits(int ix);
 };
 
 

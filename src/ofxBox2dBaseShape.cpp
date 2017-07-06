@@ -281,3 +281,18 @@ void ofxBox2dBaseShape::addRepulsionForce(ofVec2f pt, float radius, float amt) {
 //------------------------------------------------
 void ofxBox2dBaseShape::update() { }
 void ofxBox2dBaseShape::draw() { }
+
+void ofxBox2dBaseShape::setFilterGroup(int ix) {
+    fixture.filter.groupIndex = ix;
+    body->GetFixtureList()->SetFilterData(fixture.filter);
+}
+
+void ofxBox2dBaseShape::setCategoryBits(int ix) {
+    fixture.filter.categoryBits = ix;
+    body->GetFixtureList()->SetFilterData(fixture.filter);
+}
+
+void ofxBox2dBaseShape::setMaskBits(short s) {
+    fixture.filter.maskBits = s;
+    body->GetFixtureList()->SetFilterData(fixture.filter);
+}
