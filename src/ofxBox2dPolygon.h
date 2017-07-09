@@ -52,6 +52,7 @@ public:
 
 	//----------------------------------------
 	void create(b2World * b2dworld);
+    void create(b2World * b2dworld, int _groupIndex);
 	void draw();
 	
 };
